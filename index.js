@@ -5,18 +5,22 @@ async function getJSON(path) {
 // por si acaso
 const dar_data = async (url, method = "GET", body = null) => {
     try {
-        const token = localStorage.getItem("token")
-        !token && ( window.location.href = "/" )
+        // const token = localStorage.getItem("token")
+        // !token && ( window.location.href = "/" )
+        console.log("va bien");
         const response = await fetch(url, {
             headers: {
-                'Content-Type': 'application/json',
-                'Authorization': `Bearer ${token}`
+                'Content-Type': 'application/json'
+                // 'Authorization': `Bearer ${token}`
             }, 
             method: method,
             body: body
         })
+        console.log(response);
+        console.log("por aquí también");
         // transformar a JSON
         const data = await response.json()
+        console.log("aun nada malo");
         console.log(data.data);
         return {
             data, response
@@ -41,3 +45,20 @@ const verificar = () => {
 }
 
 verificar()
+
+const listar = async () => {
+    const lista = document.getElementById("lista")
+    const a = await dar_data("https://vg-cine-server.herokuapp.com/api-docs/movies")
+    console.log(a);
+    const data = a.data
+    lista.innerHTML = ""
+    data.forEach((element) => {
+        lista.innerHTML += `
+        <div>
+            <img src="${element.poster_path}" alt="${element.title}">
+        </div>
+        `
+    });
+}
+
+listar()
