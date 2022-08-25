@@ -11,6 +11,11 @@ h1, h2, h3, h4, h5, h6, p {
     background-color: aliceblue;
 }
 
+.nav-link {
+    color: aliceblue;
+    text-decoration: none;
+}
+
 a {
     color: aliceblue;
     text-decoration: none;
