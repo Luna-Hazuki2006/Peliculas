@@ -48,14 +48,14 @@ verificar()
 
 const listar = async () => {
     const lista = document.getElementById("lista")
-    const a = await dar_data("https://vg-cine-server.herokuapp.com/api-docs/movies")
+    const a = await dar_data("https://vg-cine-server.herokuapp.com/movies")
     console.log(a);
     const data = a.data
     lista.innerHTML = ""
-    data.forEach((element) => {
+    data.data.forEach((element) => {
         lista.innerHTML += `
         <div>
-            <img src="${element.poster_path}" alt="${element.title}">
+            <img src="https://image.tmdb.org/t/p/w500${element.backdrop_path}" alt="${element.title}">
         </div>
         `
     });

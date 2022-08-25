@@ -1,3 +1,11 @@
 footer {
     background-color: black;
 }
+
+header {
+    background-color: black;
+}
+
+.smaller {
+    width: 30px;
+}
