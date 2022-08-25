@@ -2,10 +2,33 @@ footer {
     background-color: black;
 }
 
+h1, h2, h3, h4, h5, h6, p {
+    color: aliceblue;
+}
+
+a {
+    color: aliceblue;
+    text-decoration: none;
+}
+
 header {
+    color: aliceblue;
     background-color: black;
+    display: flex;
+    justify-content: space-between;
+}
+
+.fila {
+    display: flex;
+    text-align: center;
+    height: fit-content;
 }
 
 .smaller {
     width: 30px;
+}
+
+.nada {
+    text-decoration: none;
+    color: aliceblue;
 }
