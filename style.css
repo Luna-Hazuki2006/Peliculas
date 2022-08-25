@@ -2,8 +2,21 @@ footer {
     background-color: black;
 }
 
+main {
+    background-color: brown;
+}
+
+.bonito {
+    font-family: 'Brush Script MT', cursive;
+}
+
 h1, h2, h3, h4, h5, h6, p {
     color: aliceblue;
+}
+
+.central {
+    display: flex;
+    align-items: center;
 }
 
 .navbar-toggler {
