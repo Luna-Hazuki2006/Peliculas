@@ -12,8 +12,8 @@ async function getJSON(path) {
 // por si acaso
 const dar_data = async (url, method = "GET", body = null) => {
     try {
-        // const token = localStorage.getItem("token")
-        // !token && ( window.location.href = "/" )
+        const token = localStorage.getItem("token")
+        !token && ( window.location.href = "/" )
         console.log("va bien");
         const response = await fetch(url, {
             headers: {
@@ -38,3 +38,54 @@ const dar_data = async (url, method = "GET", body = null) => {
     }
 }
 // también por si acaso
+
+const iniciar = document.getElementById("iniciar")
+iniciar?.addEventListener("submit", async (event) => {
+    event.preventDefault()
+    const correo = document.getElementById("correo")
+    const contraseña = document.getElementById("contraseña")
+    if (correo.value === "" || contraseña.value === "") {
+        Swal.fire(
+            'Oh no!',
+            'Todos los campos tienen que estar llenos',
+            'error'
+        )
+        return
+    }
+    const usuario = {
+        "email": correo.value,
+        "password": contraseña.value
+    }
+    try {
+        const response = await dar_data("https://vg-cine-server.herokuapp.com/login", "POST", JSON.stringify(usuario))
+        console.log(response.data);
+        console.log(response.response);
+        if (response.response.status === 200) {
+            Swal.fire({
+                icon: 'succes',
+                title: '¡Lo lograste!',
+                text: 'Pudiste iniciar sesión exitósamente', 
+                confirmButtonColor: '#3085d6',
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    const token = response.data.token
+                    localStorage.setItem("token", token)
+                    window.location.href = "/"
+                }
+            })
+        } else {
+            Swal.fire({
+                icon: 'error',
+                title: '¡Oh no!',
+                text: 'Hubo un error y no te pudiste registrar'
+            })
+        }
+    } catch (error) {
+        Swal.fire({
+            icon: 'error',
+            title: '¡Oh no!',
+            text: error
+        })
+        console.error(error);
+    }
+})

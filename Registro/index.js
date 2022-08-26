@@ -5,8 +5,8 @@ async function getJSON(path) {
 // por si acaso
 const dar_data = async (url, method = "GET", body = null) => {
     try {
-        // const token = localStorage.getItem("token")
-        // !token && ( window.location.href = "/" )
+        const token = localStorage.getItem("token")
+        !token && ( window.location.href = "/" )
         console.log("va bien");
         const response = await fetch(url, {
             headers: {
@@ -74,7 +74,7 @@ registrar?.addEventListener("submit", async (event) => {
                 confirmButtonColor: '#3085d6',
             }).then((result) => {
                 if (result.isConfirmed) {
-                window.location.href = "/"
+                    window.location.href = "/"
                 }
             })
         } if (response.response.status === 400) {
