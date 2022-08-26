@@ -59,14 +59,14 @@ const listar = async () => {
         while (ocasion) {
             banner.innerHTML = `
             <div>
-                <img src="https://image.tmdb.org/t/p/w500${element.backdrop_path}" alt="${element.title}">
+                <img class="" src="https://image.tmdb.org/t/p/w500${element.backdrop_path}" alt="${element.title}">
             </div>
             `
             ocasion = false
         }
         lista.innerHTML += `
         <div>
-            <img src="https://image.tmdb.org/t/p/w500${element.poster_path}" alt="${element.title}">
+            <img class="" src="https://image.tmdb.org/t/p/w500${element.poster_path}" alt="${element.title}">
         </div>
         `
     });
