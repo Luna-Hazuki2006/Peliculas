@@ -4,6 +4,20 @@ footer {
 
 main {
     background-color: brown;
+    text-align: center;
+}
+
+.peliculas {
+    border-radius: 5px;  
+}
+
+.pelicula-titulo {
+    object-fit: contain;
+    border-radius: 5px; 
+}
+
+.texto {
+    font-family: 'Brush Script MT', cursive;
 }
 
 .bonito {
@@ -20,6 +34,7 @@ h1, h2, h3, h4, h5, h6, p {
     flex-direction: column;
     align-items: center;
     gap: 20px;
+    padding: 20px;
 }
 
 .navbar-toggler {

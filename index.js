@@ -56,17 +56,17 @@ const listar = async () => {
     lista.innerHTML = ""
     let ocasion = true
     data.data.forEach((element) => {
-        while (ocasion) {
+        if (ocasion) {
             banner.innerHTML = `
             <div>
-                <img class="" src="https://image.tmdb.org/t/p/w500${element.backdrop_path}" alt="${element.title}">
+                <img class="pelicula-titulo" src="https://image.tmdb.org/t/p/w500${element.backdrop_path}" alt="${element.title}">
             </div>
             `
             ocasion = false
         }
         lista.innerHTML += `
         <div>
-            <img class="" src="https://image.tmdb.org/t/p/w500${element.poster_path}" alt="${element.title}">
+            <img class="peliculas" src="https://image.tmdb.org/t/p/w500${element.poster_path}" alt="${element.title}">
         </div>
         `
     });
