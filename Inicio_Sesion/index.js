@@ -13,7 +13,7 @@ async function getJSON(path) {
 const dar_data = async (url, method = "GET", body = null) => {
     try {
         const token = localStorage.getItem("token")
-        !token && ( window.location.href = "/" )
+        token && ( window.location.href = "/" )
         console.log("va bien");
         const response = await fetch(url, {
             headers: {
@@ -56,6 +56,8 @@ iniciar?.addEventListener("submit", async (event) => {
         "email": correo.value,
         "password": contraseña.value
     }
+    console.log(correo.value);
+    console.log(contraseña.value);
     try {
         const response = await dar_data("https://vg-cine-server.herokuapp.com/login", "POST", JSON.stringify(usuario))
         console.log(response.data);
@@ -68,6 +70,7 @@ iniciar?.addEventListener("submit", async (event) => {
                 confirmButtonColor: '#3085d6',
             }).then((result) => {
                 if (result.isConfirmed) {
+                    console.log("pasó por aquí");
                     const token = response.data.token
                     localStorage.setItem("token", token)
                     window.location.href = "/"
