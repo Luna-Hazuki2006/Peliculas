@@ -77,6 +77,12 @@ registrar?.addEventListener("submit", async (event) => {
                 window.location.href = "/"
                 }
             })
+        } if (response.response.status === 400) {
+            Swal.fire({
+                icon: 'warning',
+                title: '¡Oh no!',
+                text: 'Ya se ha registrado este usuario antes D:'
+            })
         } else {
             Swal.fire({
                 icon: 'error',
