@@ -21,6 +21,7 @@ main {
 .pelicula-titulo {
     object-fit: contain;
     border-radius: 5px; 
+    width: 100%;
 }
 
 .texto {
