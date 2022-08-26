@@ -7,12 +7,12 @@ header a img{
     width: 134px;
     margin-top: 4px;
 }
-.login-page {
+.sesion-pagina {
     width: 360px;
     padding: 8% 0 0;
     margin: auto;
 }
-.login-page .form .login{
+.sesion-pagina .form .sesion{
     margin-top: -31px;
     margin-bottom: 26px;
 }
@@ -52,12 +52,12 @@ header a img{
     transition: all 0.3 ease;
     cursor: pointer;
 }
-.form .message {
+.form .mensaje {
     margin: 15px 0 0;
     color: #b3b3b3;
     font-size: 12px;
 }
-.form .message a {
+.form .mensaje a {
     color: #4CAF50;
     text-decoration: none;
 }
