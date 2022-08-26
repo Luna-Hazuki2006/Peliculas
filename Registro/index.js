@@ -63,18 +63,33 @@ registrar?.addEventListener("submit", async (event) => {
         "password": contraseña.value
     }
 
-    const response = await dar_data("https://vg-cine-server.herokuapp.com/register", "POST", JSON.stringify(usuario))
+    try {
+        const response = await dar_data("https://vg-cine-server.herokuapp.com/register", "POST", JSON.stringify(usuario))
  
-    if (response.response.status === 200) {
+        if (response.response.status === 200) {
+            Swal.fire({
+                icon: 'succes',
+                title: '¡Lo lograste!',
+                text: 'Te pudiste registrar exitósamente', 
+                confirmButtonColor: '#3085d6',
+            }).then((result) => {
+                if (result.isConfirmed) {
+                window.location.href = "/"
+                }
+            })
+        } else {
+            Swal.fire({
+                icon: 'error',
+                title: '¡Oh no!',
+                text: 'Hubo un error y no te pudiste registrar'
+            })
+        }
+    } catch (error) {
         Swal.fire({
-            icon: 'succes',
-            title: '¡Lo lograste!',
-            text: 'Te pudiste registrar exitósamente', 
-            confirmButtonColor: '#3085d6',
-        }).then((result) => {
-            if (result.isConfirmed) {
-              window.location.href = "/"
-            }
+            icon: 'error',
+            title: '¡Oh no!',
+            text: error
         })
+        console.error(error);
     }
 })
