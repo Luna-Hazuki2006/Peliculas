@@ -4,25 +4,78 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
     <script src="index.js"></script>
     <title>Document</title>
 </head>
 <body>
-    <div class="container">
-        <h1>Login Form</h1>
-        <form>
-            <div class="form-control">
-                <input type="text" required>
-                <label>Email</label>
+    <nav class="navbar navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../index.html"><h1 class="bonito">VG Cine</h1></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#">Películas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Cines</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Promociones</a>
+                    </li>
+                    <!-- <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Dropdown
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li> -->
+                    <!-- <li class="nav-item">
+                        <a class="nav-link disabled">Disabled</a>
+                    </li> -->
+                </ul>
+                <!-- <div>
+                    <a href="Inicio_Sesion/index.html">
+                        <button id="iniciar" class="btn btn-outline-success">Iniciar sesión</button>
+                    </a>
+                    <a href="Registro/index.html">
+                        <button id="registrar" class="btn btn-outline-success">Registrar</button>
+                    </a>
+                    <a href="">
+                        <button id="perfil" class="btn btn-outline-success">Ver perfil</button>
+                    </a>
+                </div> -->
+                <!-- <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form> -->
             </div>
-            <div class="form-control">
-                <input type="password" required>
-                <label>Password</label>
+        </div>
+    </nav>
+    <div class="login-page">
+        <div class="form">
+            <div class="login">
+                <div class="login-header">
+                    <h3>Iniciar Sesión</h3>
+                    <p>Por favor ingrese sus datos.</p>
+                </div>
             </div>
-            <button class="btn">Login</button>
-            <p class="text">Don't have an account? <a href="#">Register</a></p>
-        </form>
+            <form class="login-form">
+                <input type="text" placeholder="Nombre de usuario"/>
+                <input type="password" placeholder="Contraseña"/>
+                <button>Iniciar sesión</button>
+                <p class="message">¿Aún no estás registrado? <a href="../Registro/index.html">¡Haz una cuenta!</a></p>
+            </form>
+        </div>
     </div>
 </body>
 </html>
