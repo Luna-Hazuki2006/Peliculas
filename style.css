@@ -1,7 +1,5 @@
 footer {
     background-color: black;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
 main {
@@ -10,7 +8,9 @@ main {
 }
 
 .peliculas {
-    border-radius: 5px;  
+    object-fit: cover;
+    border-radius: 5px;
+    width: 300px;
     transition: all 0.5s ease-in-out;
 }
 
@@ -39,11 +39,16 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .central {
-    display: flex;
+    /*display: flex;
     flex-direction: column;
     align-items: center;
     gap: 30px;
-    padding: 20px;
+    padding: 20px;*/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 30px;
+    padding: 30px;
 }
 
 .navbar-toggler {
@@ -85,4 +90,39 @@ header {
 .nada {
     text-decoration: none;
     color: aliceblue;
+}
+
+.enlaces {
+    display: flex;
+    flex-wrap: wrap;
+    /* flex-direction: row; */
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 1200px;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.iconos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+    row-gap: 50px;
+    padding: 20px;
+}
+
+@media screen and (min-width: 780px) {
+    .iconos {
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+        gap: 20px;
+    }
+
+    .enlaces {
+        flex-direction: row;
+        text-align: left;
+    }
 }
