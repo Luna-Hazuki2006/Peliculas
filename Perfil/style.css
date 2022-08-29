@@ -119,7 +119,7 @@ form p {
     position: relative; 
 }
   
-.password {
+.contraseña {
     width: 90%;
     padding: 15px 12px;
     margin-bottom: 5px;
@@ -129,7 +129,7 @@ form p {
     color: #555;
 }
 
-.password + .unmask {
+.contraseña + .unmask {
     position: absolute;
     right: 5%;
     top: 10px;
@@ -146,7 +146,7 @@ form p {
     outline:none
 }
 
-.password + .unmask:before {
+.contraseña + .unmask:before {
     content: "\f06e";
     position:absolute;
     top:0; left:0;
@@ -159,7 +159,7 @@ form p {
     border-radius: 50%;
 }
 
-.password[type="text"] + .unmask:before {
+.contraseña[type="text"] + .unmask:before {
     content:"\f070";
     background: rgba(105,205,255,0.2);
     color:#06a
@@ -202,4 +202,15 @@ form p {
     box-shadow:50em 0 0 #ada inset
 }
   
-  
+.boton {
+    /* height:20px;
+    font-size:12px;
+    color:#daa; */
+    font-size: 30px;
+    /* text-transform: capitalize; */
+    background:rgba(180, 134, 231, 0.4);
+    border-radius:5px;
+    font-family: 'Brush Script MT', cursive;
+    /* overflow:hidden */
+    height: 50px;
+}
