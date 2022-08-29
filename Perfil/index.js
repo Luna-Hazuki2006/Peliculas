@@ -52,3 +52,53 @@ const datos_iniciales = async () => {
 }
 
 datos_iniciales()
+
+const modificarPerfil = document.getElementById("m-p")
+const cambiarContraseña = document.getElementById("c-c")
+const verCompras = document.getElementById("v-c")
+const cerrarSesion = document.getElementById("c-s")
+
+const contraseña = document.getElementById("contraseña")
+const compras = document.getElementById("compras")
+const perfil = document.getElementById("perfil")
+
+const listaVistas = [
+    contraseña, compras, perfil
+]
+console.log(listaVistas);
+
+const vistaDependiente = (indice, verdad) => {
+    listaVistas[indice].style.display = (verdad) ? "block" : "none"
+}
+
+vistaDependiente(0, false)
+vistaDependiente(1, false)
+vistaDependiente(2, false)
+
+modificarPerfil?.addEventListener("click", () => {
+    vistaDependiente(2, true)
+    vistaDependiente(0, false)
+    vistaDependiente(1, false)
+})
+
+cambiarContraseña?.addEventListener("click", () => {
+    vistaDependiente(0, true)
+    vistaDependiente(1, false)
+    vistaDependiente(2, false)
+    const cambiarla = document.getElementById("cambiar-contraseña")
+    cambiarla.addEventListener("submit", async () => {
+
+    })
+})
+
+verCompras?.addEventListener("click", () => {
+    vistaDependiente(1, true)
+    vistaDependiente(0, false)
+    vistaDependiente(2, false)
+})
+
+cerrarSesion?.addEventListener("click", () => {
+    localStorage.removeItem("token")
+    console.log("cerrar sesión");
+    window.location.href = "/"
+})

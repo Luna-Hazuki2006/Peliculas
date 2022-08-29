@@ -69,9 +69,37 @@
             <p id="apellidos"></p>
             <p id="cedula"></p>
             <p id="direccion"></p>
-            <button>Modificar perfil</button>
-            <button>Cambiar contraseña</button>
-            <button>Ver historial de compras</button>
+            <button id="m-p">Modificar perfil</button>
+            <button id="c-c">Cambiar contraseña</button>
+            <button id="v-c">Ver historial de compras</button>
+            <button id="c-s">Cerrar sesión</button>
+        </div>
+        <div id="perfil">
+        </div>
+        <div id="contraseña">
+            <div class="caja">
+                <form id="cambiar-contraseña">
+                    <h1>Modificar la contraseña 
+                        <span>¡Escoge una buena!</span>
+                    </h1>
+                    <p>
+                        <input type="password" value="" placeholder="Ingresa la contraseña" id="p" class="password">
+                        <!-- <button class="unmask" type="button"></button> -->
+                    </p>
+                    <p>     
+                        <input type="password" value="" placeholder="Confirma la contraseña" id="p-c" class="password">
+                        <!-- <button class="unmask" type="button"></button> -->
+                        <div class="estetico">
+                            <span>En serio, no pongas la contraseña como 12345</span>
+                        </div>
+                        <div class="valido"></div>
+                        <small>La contraseña tiene que ser igual en ambos campos, con la recomendación que no sea 12345, ¡gracias!</small>
+                    </p>
+                </form>
+            </div>
+        </div>
+        <div id="compras">
+
         </div>
     </main>
 </body>
