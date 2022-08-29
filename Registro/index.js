@@ -6,7 +6,7 @@ async function getJSON(path) {
 const dar_data = async (url, method = "GET", body = null) => {
     try {
         const token = localStorage.getItem("token")
-        !token && ( window.location.href = "/" )
+        token && ( window.location.href = "/" )
         console.log("va bien");
         const response = await fetch(url, {
             headers: {
@@ -68,7 +68,7 @@ registrar?.addEventListener("submit", async (event) => {
  
         if (response.response.status === 200) {
             Swal.fire({
-                icon: 'succes',
+                icon: 'success',
                 title: '¡Lo lograste!',
                 text: 'Te pudiste registrar exitósamente', 
                 confirmButtonColor: '#3085d6',
@@ -77,11 +77,11 @@ registrar?.addEventListener("submit", async (event) => {
                     window.location.href = "/"
                 }
             })
-        } if (response.response.status === 400) {
+        } else if (response.response.status === 400) {
             Swal.fire({
                 icon: 'warning',
                 title: '¡Oh no!',
-                text: 'Ya se ha registrado este usuario antes D:'
+                text: response.data.error
             })
         } else {
             Swal.fire({

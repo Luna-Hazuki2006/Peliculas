@@ -64,7 +64,7 @@ iniciar?.addEventListener("submit", async (event) => {
         console.log(response.response);
         if (response.response.status === 200) {
             Swal.fire({
-                icon: 'succes',
+                icon: 'success',
                 title: '¡Lo lograste!',
                 text: 'Pudiste iniciar sesión exitósamente', 
                 confirmButtonColor: '#3085d6',
@@ -80,7 +80,7 @@ iniciar?.addEventListener("submit", async (event) => {
             Swal.fire({
                 icon: 'error',
                 title: '¡Oh no!',
-                text: 'Hubo un error y no te pudiste registrar'
+                text: 'Hubo un error y no pudiste iniciar sesión'
             })
         }
     } catch (error) {
