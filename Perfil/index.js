@@ -86,8 +86,23 @@ cambiarContraseña?.addEventListener("click", () => {
     vistaDependiente(1, false)
     vistaDependiente(2, false)
     const cambiarla = document.getElementById("cambiar-contraseña")
-    cambiarla.addEventListener("submit", async () => {
-
+    cambiarla.addEventListener("submit", async (event) => {
+        event.preventDefault()
+        const primera = document.getElementById("primera")
+        const segunda = document.getElementById("segunda")
+        if (primera.value === segunda.value) {
+            const info = {
+                "password": primera.value,
+                "confirmPassword": segunda.value
+            }
+            const data = await dar_data("https://vg-cine-server.herokuapp.com/change-password", "PUT", JSON.stringify(info))
+        } else {
+            Swal.fire(
+                '¡On no!',
+                'Las contraseñas no son iguales D:',
+                'error'
+            )
+        }
     })
 })
 

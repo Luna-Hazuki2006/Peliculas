@@ -97,12 +97,14 @@ header {
     box-shadow:0 3px 12px rgba(0,0,0,0.2);
     border-radius:2%
 }
-h1 {
+
+#cambiar-contraseña h1 {
     margin-bottom: 1.5em;
     font-size: 30px;
     color: #484548;
     font-weight: 100;
 }
+
 h1 span, small {
     display:block;
     font-size: 14px;
