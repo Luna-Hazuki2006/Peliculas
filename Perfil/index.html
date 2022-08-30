@@ -69,6 +69,7 @@
             <p id="nombres"></p>
             <p id="apellidos"></p>
             <p id="cedula"></p>
+            <p id="nacimiento"></p>
             <p id="direccion"></p>
             <button id="m-p">Modificar perfil</button>
             <button id="c-c">Cambiar contraseña</button>
@@ -76,18 +77,46 @@
             <button id="c-s">Cerrar sesión</button>
         </div>
         <div id="perfil">
+            <div class="caja">
+                <form id="cambiar-perfil" class="form-parte">
+                    <h1>Modificar el perfil 
+                        <span>¡Recuerda los cambios hechos!</span>
+                    </h1>
+                    <p>
+                        <input type="text" name="nombres-cambio" id="nombres-cambio" placeholder="Nombres" class="input">
+                    </p>
+                    <p>
+                        <input type="text" name="apellidos-cambio" id="apellidos-cambio" placeholder="Apellidos" class="input">
+                    </p>
+                    <p>
+                        <input type="text" name="cedula-cambio" id="cedula-cambio" placeholder="cédula" class="input">
+                    </p>
+                    <p>
+                        <input type="date" name="nacimiento-cambio" id="nacimiento-cambio" placeholder="Fecha de nacimiento" class="input">
+                    </p>
+                    <p>
+                        <input type="text" name="direccion-cambio" id="direccion-cambio" placeholder="Dirección" class="input">
+                        <div class="estetico">
+                            <span>Y trata de mostrarle esto a extraños</span>
+                        </div>
+                        <div class="valido"></div>
+                        <small>La información se debe cambiar solo cuando esté equivocada</small>
+                    </p>
+                    <button class="boton">Cambiar el perfil</button>
+                </form>
+            </div>
         </div>
         <div id="contraseña">
             <div class="caja">
-                <form id="cambiar-contraseña">
+                <form id="cambiar-contraseña" class="form-parte">
                     <h1>Modificar la contraseña 
                         <span>¡Escoge una buena!</span>
                     </h1>
                     <p>
-                        <input id="primera" type="password" placeholder="Ingresa la contraseña" class="contraseña">
+                        <input id="primera" type="password" placeholder="Ingresa la contraseña" class="input">
                     </p>
                     <p>     
-                        <input id="segunda" type="password" placeholder="Confirma la contraseña" class="contraseña">
+                        <input id="segunda" type="password" placeholder="Confirma la contraseña" class="input">
                         <div class="estetico">
                             <span>En serio, no pongas la contraseña como 12345</span>
                         </div>
@@ -102,5 +131,27 @@
 
         </div>
     </main>
+    <!-- <footer>
+        <div class="iconos">
+            <a href="">
+                <img class="smaller" src="../assets/facebook.png" alt="facebook">
+            </a>
+            <a href="">
+                <img class="smaller" src="../assets/instagram.png" alt="instagram">
+            </a>
+            <a href="">
+                <img class="smaller" src="../assets/twitter.png" alt="twitter">
+            </a>
+            <a href="">
+                <img class="smaller" src="../assets/youtube.png" alt="youtube">
+            </a>
+        </div>
+        <div class="enlaces">
+            <a href="">Términos y Condiciones</a>
+            <a href="">Contáctanos</a>
+            <a href="">Sede de Sucursales</a>
+            <a href="">Conoce a los creadores</a>
+        </div>
+    </footer> -->
 </body>
 </html>

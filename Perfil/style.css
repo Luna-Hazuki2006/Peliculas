@@ -5,8 +5,13 @@ footer {
 }
 
 main {
-    background-color: brown;
     text-align: center;
+    /* min-height: 90%;
+    height: 90%; */
+}
+
+body {
+    background-color: brown !important;
 }
 
 .peliculas {
@@ -98,7 +103,7 @@ header {
     border-radius:2%
 }
 
-#cambiar-contraseña h1 {
+.form-parte h1 {
     margin-bottom: 1.5em;
     font-size: 30px;
     color: #484548;
@@ -121,7 +126,7 @@ form p {
     position: relative; 
 }
   
-.contraseña {
+.input {
     width: 90%;
     padding: 15px 12px;
     margin-bottom: 5px;
@@ -131,7 +136,7 @@ form p {
     color: #555;
 }
 
-.contraseña + .unmask {
+.input + .unmask {
     position: absolute;
     right: 5%;
     top: 10px;
@@ -148,7 +153,7 @@ form p {
     outline:none
 }
 
-.contraseña + .unmask:before {
+.input + .unmask:before {
     content: "\f06e";
     position:absolute;
     top:0; left:0;
@@ -161,7 +166,7 @@ form p {
     border-radius: 50%;
 }
 
-.contraseña[type="text"] + .unmask:before {
+.input[type="text"] + .unmask:before {
     content:"\f070";
     background: rgba(105,205,255,0.2);
     color:#06a
@@ -215,4 +220,43 @@ form p {
     font-family: 'Brush Script MT', cursive;
     /* overflow:hidden */
     height: 50px;
+}
+
+.smaller {
+    width: 30px;
+}
+
+.enlaces {
+    display: flex;
+    flex-wrap: wrap;
+    /* flex-direction: row; */
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 1200px;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.iconos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+    row-gap: 50px;
+    padding: 20px;
+}
+
+@media screen and (min-width: 780px) {
+    .iconos {
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+        gap: 20px;
+    }
+
+    .enlaces {
+        flex-direction: row;
+        text-align: left;
+    }
 }
