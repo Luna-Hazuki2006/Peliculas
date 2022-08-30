@@ -76,6 +76,12 @@ iniciar?.addEventListener("submit", async (event) => {
                     window.location.href = "/"
                 }
             })
+        } else if (response.response.status === 400) {
+            Swal.fire({
+                icon: 'error',
+                title: '¡Oh no!',
+                text: 'Uno de los valores no existe D:'
+            })
         } else {
             Swal.fire({
                 icon: 'error',
