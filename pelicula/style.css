@@ -1,0 +1,108 @@
+.peliculas {
+    object-fit: cover;
+    border-radius: 5px;
+    width: 300px;
+    transition: all 0.5s ease-in-out;
+}
+
+.peliculas:hover {
+    transform: scale(1.05);
+}
+
+.pelicula-titulo {
+    object-fit: contain;
+    border-radius: 5px; 
+    width: 100%;
+}
+
+.texto {
+    font-family: 'Brush Script MT', cursive;
+    
+}
+
+.bonito {
+    font-family: 'Brush Script MT', cursive;
+    color: yellow;
+}
+
+h1, h2, h3, h4, h5, h6, p, small {
+    color: aliceblue;
+}
+
+.mejor {
+    font-family: 'Brush Script MT', cursive;
+}
+
+.central {
+    /*display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 20px;*/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 30px;
+    padding: 30px;
+}
+
+.navbar-toggler {
+    border-color: aliceblue;
+    background-color: aliceblue;
+}
+
+.nav-link {
+    color: aliceblue;
+    text-decoration: none;
+}
+
+.nav-link:hover {
+    color: cornflowerblue;
+}
+
+a {
+    color: aliceblue;
+    text-decoration: none;
+}
+
+body {
+    background-color: brown;
+}
+
+main {
+    padding: 10px;
+}
+
+.arriba {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
+}
+
+.imagen {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.textito {
+    display: flex;
+    justify-content: center;
+}
+
+.titulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    text-align: center;
+}
+
+@media screen and (min-width: 780px) {
+    .arriba {
+        display: flex;
+    }
+
+    .imagen {
+        width: 50%;
+    }
+}

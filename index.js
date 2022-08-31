@@ -55,7 +55,9 @@ const listar = async () => {
     data.data.forEach((element) => {
         lista.innerHTML += `
         <div>
-            <img class="peliculas" src="https://image.tmdb.org/t/p/w500${element.poster_path}" alt="${element.title}">
+            <a href="pelicula/index.html?id=${element.id}">
+                <img class="peliculas" src="https://image.tmdb.org/t/p/w500${element.poster_path}" alt="${element.title}">
+            </a>
         </div>
         `
     });
