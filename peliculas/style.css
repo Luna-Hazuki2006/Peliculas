@@ -1,0 +1,128 @@
+footer {
+    background-color: black;
+}
+
+main {
+    background-color: brown;
+    text-align: center;
+}
+
+.peliculas {
+    object-fit: cover;
+    border-radius: 5px;
+    width: 300px;
+    transition: all 0.5s ease-in-out;
+}
+
+.peliculas:hover {
+    transform: scale(1.05);
+}
+
+.pelicula-titulo {
+    object-fit: contain;
+    border-radius: 5px; 
+    width: 100%;
+}
+
+.texto {
+    font-family: 'Brush Script MT', cursive;
+    
+}
+
+.bonito {
+    font-family: 'Brush Script MT', cursive;
+    color: yellow;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    color: aliceblue;
+}
+
+.central {
+    /*display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 20px;*/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 30px;
+    padding: 30px;
+}
+
+.navbar-toggler {
+    border-color: aliceblue;
+    background-color: aliceblue;
+}
+
+.nav-link {
+    color: aliceblue;
+    text-decoration: none;
+}
+
+.nav-link:hover {
+    color: cornflowerblue;
+}
+
+a {
+    color: aliceblue;
+    text-decoration: none;
+}
+
+header {
+    color: aliceblue;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+}
+
+.fila {
+    display: flex;
+    text-align: center;
+    height: fit-content;
+}
+
+.smaller {
+    width: 30px;
+}
+
+.nada {
+    text-decoration: none;
+    color: aliceblue;
+}
+
+.enlaces {
+    display: flex;
+    flex-wrap: wrap;
+    /* flex-direction: row; */
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 1200px;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.iconos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+    row-gap: 50px;
+    padding: 20px;
+}
+
+@media screen and (min-width: 780px) {
+    .iconos {
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+        gap: 20px;
+    }
+
+    .enlaces {
+        flex-direction: row;
+        text-align: left;
+    }
+}
