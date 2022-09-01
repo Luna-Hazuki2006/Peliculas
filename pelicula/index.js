@@ -37,18 +37,23 @@ const verdad = (localStorage.getItem("token")) ? true : false
 const iniciar = document.getElementById("iniciar")
 const registrar = document.getElementById("registrar")
 const perfil = document.getElementById("perfil")
+const comprar = document.getElementById("comprar")
+const enlace = document.getElementById("enlaceImportante")
+
+const urlSearchParams = new URLSearchParams(window.location.search);
+const params = Object.fromEntries(urlSearchParams.entries());
+const id = params.id
+
+enlace.href = "../boleto/index.html?" + id
 
 const verificar = () => {
     iniciar.style.display = (!verdad) ? "display" : "none"
     registrar.style.display = (!verdad) ? "display" : "none"
     perfil.style.display = (verdad) ? "display" : "none"
+    comprar.style.display = (verdad) ? "display" : "none"
 }
 
 verificar()
-
-const urlSearchParams = new URLSearchParams(window.location.search);
-const params = Object.fromEntries(urlSearchParams.entries());
-const id = params.id
 
 const llenar = async () => {
     const info = await dar_data(`https://vg-cine-server.herokuapp.com/movie-detail/${id}`)
