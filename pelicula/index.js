@@ -54,33 +54,34 @@ const llenar = async () => {
     const info = await dar_data(`https://vg-cine-server.herokuapp.com/movie-detail/${id}`)
     console.log("esto es info");
     console.log(info);
-    const vista = document.getElementById("pelicula")
+    const imagen = document.getElementById("imagen")
+    const titulo = document.getElementById("titulo")
+    const descripcion = document.getElementById("descripcion")
+    const coleccion = document.getElementById("coleccion")
+    const fecha = document.getElementById("fecha")
+    const generos = document.getElementById("generos")
+    const elencos = document.getElementById("elencos")
+    const epico = document.getElementById("epico")
     let gente = ""
-    let generos = ""
+    let generosTexto = ""
     info.data.data.cast.forEach(element => {
         gente += element.name + " como " + element.character + ". "
     });
     info.data.data.genres.forEach(element => {
-        generos += element.name + "; "
+        generosTexto += element.name + "; "
     });
-    vista.innerHTML = `
-    <div class="arriba">
-        <img class="imagen" src="https://image.tmdb.org/t/p/w500${info.data.data.backdrop_path}" alt="${info.data.data.title}">
-        <div class="titulo">
-            <h1 class="mejor">${info.data.data.title}</h1>
-        </div>
-    </div>
-    <div>
-        <h1>Sinopsis: </h1>
-        <p>Descripción: ${info.data.data.overview}</p>
-        
-        <p>${(info.data.data.belongs_to_collection) ? "De la colección de películas: " + info.data.data.belongs_to_collection.name : "Es una película sin saga"}</p>
-        <p>Fecha de estreno: ${info.data.data.release_date}</p>
-        <p>Géneros: ${generos}</p>
-        <p>Elenco: ${gente}</p>
-        <h2 class="textito mejor">${info.data.data.tagline}</2>
-    </div>
-    `
+    imagen.src = `https://image.tmdb.org/t/p/w500${info.data.data.backdrop_path}`
+    imagen.alt = info.data.data.title
+    titulo.innerText = info.data.data.title
+    descripcion.innerText = info.data.data.overview
+    coleccion.innerText = (info.data.data.belongs_to_collection) ? 
+        "De la colección de películas: " + info.data.data.belongs_to_collection.name : 
+        "Es una película sin saga"
+    fecha.innerText = "Fecha de estreno: " + info.data.data.release_date
+    generos.innerText = "Géneros: " + generosTexto
+    elencos.innerText = "Elenco: " + gente
+    epico.innerText = info.data.data.tagline
 }
 
 llenar()
+

@@ -33,6 +33,16 @@ h1, h2, h3, h4, h5, h6, p, small {
     font-family: 'Brush Script MT', cursive;
 }
 
+.mejorboton {
+    font-family: 'Brush Script MT', cursive;
+    color: black;
+}
+
+.fondito {
+    background-color: aquamarine;
+    border-radius: 5px;
+}
+
 .central {
     /*display: flex;
     flex-direction: column;
