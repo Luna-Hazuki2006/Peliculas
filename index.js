@@ -39,9 +39,9 @@ const registrar = document.getElementById("registrar")
 const perfil = document.getElementById("perfil")
 
 const verificar = () => {
-    iniciar.style.display = (!verdad) ? "display" : "none"
-    registrar.style.display = (!verdad) ? "display" : "none"
-    perfil.style.display = (verdad) ? "display" : "none"
+    iniciar.style.display = (!verdad) ? "block" : "none"
+    registrar.style.display = (!verdad) ? "block" : "none"
+    perfil.style.display = (verdad) ? "block" : "none"
 }
 
 verificar()
