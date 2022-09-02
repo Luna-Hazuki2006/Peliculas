@@ -57,6 +57,29 @@
                 <a id="enlaceImportante" href="">
                     <button class="fondito" id="comprar"><h2 class="mejorboton">Comprar un boleto</h2></button>
                 </a>
+                <div class="sesion-pagina">
+                    <div class="form">
+                        <div class="sesion">
+                            <div class="sesion-header">
+                                <h3>Comprar boletos</h3>
+                                <p>Por favor ingrese los datos.</p>
+                            </div>
+                        </div>
+                        <form id="comprar" class="sesion-form">
+                            <input type="number" name="cantidad" id="cantidad" min="1" placeholder="Cantidad de boletos"/>
+                            <select  name="pago" id="pago">
+                                <option value="transferencia">Transferencia</option>
+                                <option value="efectivo">Efectivo</option>
+                                <option value="deposito">Depósito</option>
+                                <option value="pago movil">pago movil</option>
+                            </select>
+                            <input type="text" name="pago" id="pago" placeholder="Método de pago"/>
+                            <input type="text" name="cedula" id="cedula" placeholder="Cédula"/>
+                            <input type="text" name="referencia" id="referencia" placeholder="Número de referencia"/>
+                            <button>¡Comprar!</button>
+                        </form>
+                    </div>
+                </div>
                 <h1 id="datos">Datos de la película: </h1>
                 <p id="coleccion">Y tiene una colección vieja</p>
                 <p id="fecha">Incluso tiene fecha</p>
