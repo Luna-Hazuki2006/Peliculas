@@ -7,14 +7,14 @@ main {
     text-align: center;
 }
 
-.peliculas {
+.cines {
     object-fit: cover;
     border-radius: 5px;
     width: 300px;
     transition: all 0.5s ease-in-out;
 }
 
-.peliculas:hover {
+.cines:hover {
     transform: scale(1.05);
 }
 
