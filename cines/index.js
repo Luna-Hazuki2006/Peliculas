@@ -77,6 +77,7 @@ const init = () => {
         <div>
             <a href="">
                 <img class="cines" src="${element[0]}" alt="${element[1]}">
+                <h3 class="texto">${element[1]}</h3>
             </a>
         </div>
         `
