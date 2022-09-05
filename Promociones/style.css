@@ -12,6 +12,7 @@ main {
     border-radius: 5px;
     width: 300px;
     transition: all 0.5s ease-in-out;
+    border: 1px solid lavenderblush;
 }
 
 .promociones:hover {

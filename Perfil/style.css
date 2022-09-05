@@ -121,6 +121,17 @@ small{
     font-size: 11px;
 }
 
+.tickets {
+    object-fit: cover;
+    border-radius: 5px;
+    width: 300px;
+    transition: all 0.5s ease-in-out;
+    border: 1px solid lavenderblush;
+}
+
+.tickets:hover {
+    transform: scale(1.05);
+}
   
 form p { 
     position: relative; 

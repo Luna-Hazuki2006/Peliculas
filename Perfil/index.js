@@ -181,10 +181,27 @@ cambiarContraseña?.addEventListener("click", () => {
     })
 })
 
-verCompras?.addEventListener("click", () => {
+verCompras?.addEventListener("click", async () => {
     vistaDependiente(1, true)
     vistaDependiente(0, false)
     vistaDependiente(2, false)
+    const info = await dar_data("https://vg-cine-server.herokuapp.com/ticket")
+    console.log(info);
+    const compras = document.getElementById("compras")
+    compras.innerHTML = ""
+    info.data.data.forEach(element => {
+        compras.innerHTML += `
+        <div class="caja">
+            <div id="cambiar-contraseña" class="form-parte">
+                <p style="color: black;">Cantidad de boletos: ${element.ticketCount}</p>
+                <p style="color: black;">Tipo de pago: ${element.paymentMethod}</p>
+                <p style="color: black;">Número de referencia: ${element.referenceNumber}</p>
+                <p style="color: black;">Cédula con que se pagó: ${element.id}</p>
+                <p style="color: black;">Fecha de compra: ${element.date}</p>
+            </div>
+        </div>
+        `
+    });
 })
 
 cerrarSesion?.addEventListener("click", () => {
