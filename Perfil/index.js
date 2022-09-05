@@ -194,9 +194,8 @@ verCompras?.addEventListener("click", async () => {
         <div class="caja">
             <div id="cambiar-contraseña" class="form-parte">
                 <p style="color: black;">Cantidad de boletos: ${element.ticketCount}</p>
+                <p style="color: black;">Película: ${element.movieTitle}</p>
                 <p style="color: black;">Tipo de pago: ${element.paymentMethod}</p>
-                <p style="color: black;">Número de referencia: ${element.referenceNumber}</p>
-                <p style="color: black;">Cédula con que se pagó: ${element.id}</p>
                 <p style="color: black;">Fecha de compra: ${element.date}</p>
             </div>
         </div>

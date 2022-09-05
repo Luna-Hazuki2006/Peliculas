@@ -118,7 +118,8 @@ comprar.addEventListener("click", () => {
             "ticketCount": Number(cantidad.value),
             "paymentMethod": pago.value,
             "id": cedula.value,
-            "referenceNumber": referencia.value
+            "referenceNumber": referencia.value, 
+            "movieTitle": document.getElementById("titulo").innerText
         }
         console.log(datos);
         const info = await dar_data("https://vg-cine-server.herokuapp.com/ticket", "POST", JSON.stringify(datos))
