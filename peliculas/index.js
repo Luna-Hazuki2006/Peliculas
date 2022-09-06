@@ -57,6 +57,7 @@ const listar = async () => {
         <div>
             <a href="../pelicula/index.html?id=${element.id}">
                 <img class="peliculas" src="https://image.tmdb.org/t/p/w500${element.poster_path}" alt="${element.title}">
+                <h3 class="texto">${element.title}</h3>
             </a>
         </div>
         `
