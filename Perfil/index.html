@@ -34,7 +34,7 @@
         </div>
     </nav>
     <main>
-        <div>
+        <div class="datos">
             <h1>Datos personales</h1>
             <p id="correo"></p>
             <p id="nombres"></p>
@@ -42,10 +42,12 @@
             <p id="cedula"></p>
             <p id="nacimiento"></p>
             <p id="direccion"></p>
-            <button id="m-p">Modificar perfil</button>
-            <button id="c-c">Cambiar contraseña</button>
-            <button id="v-c">Ver historial de compras</button>
-            <button id="c-s">Cerrar sesión</button>
+            <div style="gap: 5px;">
+                <button class="btn btn-info mb-2" id="m-p">Modificar perfil</button>
+                <button class="btn btn-info mb-2" id="c-c">Cambiar contraseña</button>
+                <button class="btn btn-info mb-2" id="v-c">Ver historial de compras</button>
+                <button class="btn btn-warning mb-2" id="c-s">Cerrar sesión</button>
+            </div>
         </div>
         <div id="perfil">
             <div class="caja">

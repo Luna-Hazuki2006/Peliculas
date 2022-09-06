@@ -6,6 +6,7 @@ footer {
 
 main {
     text-align: center;
+    padding: 0 1rem;
     /* min-height: 90%;
     height: 90%; */
 }
@@ -256,6 +257,19 @@ form p {
     justify-items: center;
     row-gap: 50px;
     padding: 20px;
+}
+
+.datos {
+    background-color: gray;
+    color: black !important;
+    /* width: max-content; */
+    margin: auto;
+    margin-top: auto;
+    padding: 3rem 1rem;
+    border-radius: 1rem;
+    margin-top: 3rem;
+    max-width: 660px;
+    width: 100%;
 }
 
 @media screen and (min-width: 780px) {
