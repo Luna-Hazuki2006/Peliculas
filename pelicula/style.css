@@ -206,6 +206,7 @@ main {
     align-items: center;
     gap: 40px;
     text-align: center;
+    padding: 1rem;
 }
 
 @media screen and (min-width: 780px) {
