@@ -93,6 +93,12 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
+#pelicula {
+    max-width: 800px;
+    width: 100%;
+    margin: auto;
+}
+
 .peliculas {
     object-fit: cover;
     border-radius: 5px;
