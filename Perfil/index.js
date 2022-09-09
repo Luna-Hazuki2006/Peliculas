@@ -7,7 +7,6 @@ const dar_data = async (url, method = "GET", body = null) => {
     try {
         const token = localStorage.getItem("token")
         !token && ( window.location.href = "/" )
-        console.log("va bien");
         const response = await fetch(url, {
             headers: {
                 'Content-Type': 'application/json', 
@@ -16,12 +15,8 @@ const dar_data = async (url, method = "GET", body = null) => {
             method: method,
             body: body
         })
-        console.log(response);
-        console.log("por aquí también");
         // transformar a JSON
         const data = await response.json()
-        console.log("aun nada malo");
-        console.log(data.data);
         return {
             data, response
         }
@@ -54,8 +49,6 @@ const direccion = document.getElementById("direccion")
 
 const datos_iniciales = async () => {
     const info = await dar_data("https://vg-cine-server.herokuapp.com/profile")
-    console.log(info);
-    console.log(info.data.data.email);
     correo.innerText = "Email: " + info.data.data.email
     nombres.innerText = "Nombres: " + info.data.data.firstName
     apellidos.innerText = "Apellidos: " + info.data.data.lastName
@@ -78,7 +71,6 @@ const perfil = document.getElementById("perfil")
 const listaVistas = [
     contraseña, compras, perfil
 ]
-console.log(listaVistas);
 
 const vistaDependiente = (indice, verdad) => {
     listaVistas[indice].style.display = (verdad) ? "block" : "none"
@@ -197,7 +189,6 @@ verCompras?.addEventListener("click", async () => {
     vistaDependiente(0, false)
     vistaDependiente(2, false)
     const info = await dar_data("https://vg-cine-server.herokuapp.com/ticket")
-    console.log(info);
     const compras = document.getElementById("compras")
     compras.innerHTML = ""
     info.data.data.forEach(element => {

@@ -7,7 +7,6 @@ const dar_data = async (url, method = "GET", body = null) => {
     try {
         const token = localStorage.getItem("token")
         token && ( window.location.href = "/" )
-        console.log("va bien");
         const response = await fetch(url, {
             headers: {
                 'Content-Type': 'application/json'
@@ -15,12 +14,8 @@ const dar_data = async (url, method = "GET", body = null) => {
             method: method,
             body: body
         })
-        console.log(response);
-        console.log("por aquí también");
         // transformar a JSON
         const data = await response.json()
-        console.log("aun nada malo");
-        console.log(data.data);
         return {
             data, response
         }
@@ -56,12 +51,8 @@ iniciar?.addEventListener("submit", async (event) => {
         "email": correo.value,
         "password": contraseña.value
     }
-    console.log(correo.value);
-    console.log(contraseña.value);
     try {
         const response = await dar_data("https://vg-cine-server.herokuapp.com/login", "POST", JSON.stringify(usuario))
-        console.log(response.data);
-        console.log(response.response);
         if (response.response.status === 200) {
             Swal.fire({
                 icon: 'success',
@@ -70,7 +61,6 @@ iniciar?.addEventListener("submit", async (event) => {
                 confirmButtonColor: '#3085d6',
             }).then((result) => {
                 if (result.isConfirmed) {
-                    console.log("pasó por aquí");
                     const token = response.data.token
                     localStorage.setItem("token", token)
                     window.location.href = "/"

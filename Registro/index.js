@@ -14,12 +14,8 @@ const dar_data = async (url, method = "GET", body = null) => {
             method: method,
             body: body
         })
-        console.log(response);
-        console.log("por aquí también");
         // transformar a JSON
         const data = await response.json()
-        console.log("aun nada malo");
-        console.log(data.data);
         return {
             data, response
         }

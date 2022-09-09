@@ -5,7 +5,6 @@ async function getJSON(path) {
 // por si acaso
 const dar_data = async (url, method = "GET", body = null) => {
     try {
-        console.log("va bien");
         const headers = {
             'Content-Type': 'application/json'
         }
@@ -16,12 +15,8 @@ const dar_data = async (url, method = "GET", body = null) => {
             method: method,
             body: body
         })
-        console.log(response);
-        console.log("por aquí también");
         // transformar a JSON
         const data = await response.json()
-        console.log("aun nada malo");
-        console.log(data.data);
         return {
             data, response
         }
@@ -62,8 +57,6 @@ verificar()
 
 const llenar = async () => {
     const info = await dar_data(`https://vg-cine-server.herokuapp.com/movie-detail/${id}`)
-    console.log("esto es info");
-    console.log(info);
     const imagen = document.getElementById("imagen")
     const titulo = document.getElementById("titulo")
     const descripcion = document.getElementById("descripcion")
