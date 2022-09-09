@@ -32,6 +32,14 @@ const dar_data = async (url, method = "GET", body = null) => {
 }
 // también por si acaso
 
+const porSiAcaso = () => {
+    const token = localStorage.getItem("token")
+    token && ( window.location.href = "/" )
+}
+porSiAcaso()
+// Y esto porque sé que alguien tratará de partir mi sistema...
+// ¡¡¡PERO NO PODRÁN!!!! *risa malvada en la distancia*
+
 const registrar = document.getElementById("registrar")
 registrar?.addEventListener("submit", async (event) => {
     event.preventDefault()
