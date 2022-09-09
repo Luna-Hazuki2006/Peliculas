@@ -11,7 +11,6 @@ const dar_data = async (url, method = "GET", body = null) => {
         const response = await fetch(url, {
             headers: {
                 'Content-Type': 'application/json'
-                // 'Authorization': `Bearer ${token}`
             }, 
             method: method,
             body: body

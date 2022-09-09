@@ -1,10 +1,3 @@
-// const labels = document.querySelectorAll('.form-control label')
-// labels.forEach(label => {
-//     label.innerHTML = label.innerText
-//     .split('')
-//     .map((letter, idx) => `<span style="transition-delay:${idx * 50}ms">${letter}</span>`)
-//     .join('')
-// })
 async function getJSON(path) {
     const response = await fetch(path)
     return await response.json()
@@ -18,7 +11,6 @@ const dar_data = async (url, method = "GET", body = null) => {
         const response = await fetch(url, {
             headers: {
                 'Content-Type': 'application/json'
-                // 'Authorization': `Bearer ${token}`
             }, 
             method: method,
             body: body

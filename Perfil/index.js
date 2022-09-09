@@ -41,6 +41,7 @@ porSiAcaso()
 // ¡¡¡PERO NO PODRÁN!!!! *risa malvada en la distancia*
 // y ya lo sé literalmente en la línea 45 está el mismo código...
 // ¡¡¡PERO NO ME IMPORTA, NUNCA LOGRARÁN PARTIR ESTE CÓDIGO!!!!!
+// *se ahoga mientras grita y muere*
 
 const token = localStorage.getItem("token")
 !token && ( window.location.href = "/" )
@@ -219,8 +220,6 @@ cerrarSesion?.addEventListener("click", () => {
         text: "¡No podrás acceder a tu perfil!",
         icon: 'question',
         showCancelButton: true,
-        // confirmButtonColor: '#3085d6',
-        // cancelButtonColor: '#d33',
         confirmButtonText: '¡Si, quiero cerrar sesión!', 
         cancelButtonText: 'No'
     }).then((result) => {

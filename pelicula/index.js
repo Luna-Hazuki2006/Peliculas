@@ -3,10 +3,8 @@ async function getJSON(path) {
     return await response.json()
 }
 // por si acaso
-const dar_data = async (url, method = "GET", body = null, verdad) => {
+const dar_data = async (url, method = "GET", body = null) => {
     try {
-        // const token = localStorage.getItem("token")
-        // !token && ( window.location.href = "/" )
         console.log("va bien");
         const headers = {
             'Content-Type': 'application/json'
@@ -63,7 +61,7 @@ const verificar = () => {
 verificar()
 
 const llenar = async () => {
-    const info = await dar_data(`https://vg-cine-server.herokuapp.com/movie-detail/${id}`, "GET", null, false)
+    const info = await dar_data(`https://vg-cine-server.herokuapp.com/movie-detail/${id}`)
     console.log("esto es info");
     console.log(info);
     const imagen = document.getElementById("imagen")
@@ -124,7 +122,7 @@ comprar.addEventListener("click", () => {
             "movieTitle": document.getElementById("titulo").innerText
         }
         console.log(datos);
-        const info = await dar_data("https://vg-cine-server.herokuapp.com/ticket", "POST", JSON.stringify(datos), true)
+        const info = await dar_data("https://vg-cine-server.herokuapp.com/ticket", "POST", JSON.stringify(datos))
         if (info.response.status === 200) {
             Swal.fire(
                 '¡Lo lograste!',
