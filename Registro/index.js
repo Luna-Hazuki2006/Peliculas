@@ -7,7 +7,6 @@ const dar_data = async (url, method = "GET", body = null) => {
     try {
         const token = localStorage.getItem("token")
         token && ( window.location.href = "/" )
-        console.log("va bien");
         const response = await fetch(url, {
             headers: {
                 'Content-Type': 'application/json'
